@@ -6,7 +6,11 @@ import 'package:flutter_change_theme/common/common_header.dart';
 import 'package:flutter_change_theme/common/common_item.dart';
 import 'package:flutter_change_theme/constant/constant.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
+import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
+import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
+import 'package:flutter_change_theme/pages/expand_page/expand_page.dart';
 import 'package:flutter_change_theme/pages/flow_page/flow_page.dart';
+import 'package:flutter_change_theme/pages/gesture_page/gesture_page.dart';
 import 'package:flutter_change_theme/pages/stack_page/stack_page.dart';
 import 'package:flutter_change_theme/pages/text_page/text_page.dart';
 import 'package:flutter_change_theme/pages/wrap_page/wrap_page.dart';
@@ -143,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     CommonCenterItem item40 = CommonCenterItem(
-      title: '流式组件Wrap',
+      title: '自定义组件Flow',
       onTap: (item) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return FlowPage();
@@ -156,43 +160,72 @@ class _MyHomePageState extends State<MyHomePage> {
       header: CommonHeader(header: 'section1 header'),
     );
 
-    CommonSwitchItem item5 = CommonSwitchItem(
-      cacheKey: 'cacheKey5',
-      title: '5',
+    CommonItem item5 = CommonItem(
+      title: '定位装饰组件',
+      subTitle: 'Container',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return ContainerSizePage();
+        }));
+      },
     );
 
-    CommonSwitchItem item6 = CommonSwitchItem(
-      cacheKey: 'cacheKey6',
-      title: '6',
+    CommonItem item6 = CommonItem(
+      title: '权重组件',
+      subTitle: 'Flexible、Expand、Spacer',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return ExpandPage();
+        }));
+      },
+    );
+
+    CommonItem item60 = CommonItem(
+      title: '柱状图',
+      subTitle: '实例',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return CylinderChartPage();
+        }));
+      },
     );
 
     CommonGroup group2 = CommonGroup(
-      items: [item5, item6],
+      items: [item5, item6, item60],
       headerHeight: 10.0,
       footer: CommonFooter(footer: 'section2 footer'),
     );
 
-    CommonImageItem item7 = CommonImageItem(
-      imageUrl:
-          'http://tva3.sinaimg.cn/crop.0.6.264.264.180/93276e1fjw8f5c6ob1pmpj207g07jaa5.jpg',
-      title: '7',
-      width: 66.0,
-      height: 66.0,
-      padding: EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 8,
-      ),
-    );
+    // CommonImageItem item7 = CommonImageItem(
+    //   imageUrl:
+    //       'http://tva3.sinaimg.cn/crop.0.6.264.264.180/93276e1fjw8f5c6ob1pmpj207g07jaa5.jpg',
+    //   title: '7',
+    //   width: 66.0,
+    //   height: 66.0,
+    //   padding: EdgeInsets.symmetric(
+    //     horizontal: 16,
+    //     vertical: 8,
+    //   ),
+    // );
 
-    CommonImageItem item8 = CommonImageItem(
-      imageUrl: 'assets/images/About_WeChat_AppIcon_64x64.png',
-      title: '8',
-      width: 32.0,
-      height: 32.0,
+    // CommonImageItem item8 = CommonImageItem(
+    //   imageUrl: 'assets/images/About_WeChat_AppIcon_64x64.png',
+    //   title: '8',
+    //   width: 32.0,
+    //   height: 32.0,
+    // );
+    CommonItem item7 = CommonItem(
+      title: '手势组件',
+      subTitle: 'GestureDetector、InkWell、Listener',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return GesturePage();
+        }));
+      },
     );
 
     CommonGroup group3 = CommonGroup(
-      items: [item7, item8],
+      items: [item7],
     );
 
     CommonRadioItem item9 = CommonRadioItem(
