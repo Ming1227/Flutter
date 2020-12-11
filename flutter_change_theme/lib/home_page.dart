@@ -11,6 +11,10 @@ import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
 import 'package:flutter_change_theme/pages/expand_page/expand_page.dart';
 import 'package:flutter_change_theme/pages/flow_page/flow_page.dart';
 import 'package:flutter_change_theme/pages/gesture_page/gesture_page.dart';
+import 'package:flutter_change_theme/pages/gridview_page/gridview_page.dart';
+import 'package:flutter_change_theme/pages/listview_page/listview_page.dart';
+import 'package:flutter_change_theme/pages/page_view_page/page_view_page.dart';
+import 'package:flutter_change_theme/pages/scrollbar_page/scrollbar_page.dart';
 import 'package:flutter_change_theme/pages/stack_page/stack_page.dart';
 import 'package:flutter_change_theme/pages/text_page/text_page.dart';
 import 'package:flutter_change_theme/pages/wrap_page/wrap_page.dart';
@@ -113,6 +117,11 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
+    CommonGroup group0 = CommonGroup(
+      items: [item0],
+      header: CommonHeader(header: '文本组件'),
+    );
+
     CommonItem item1 = CommonItem(
       title: '基础组件',
       subTitle: 'Button、Switch、Progress',
@@ -124,21 +133,23 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group0 = CommonGroup(
-      items: [item0, item1],
+    CommonGroup group1 = CommonGroup(
+      items: [item1],
+      header: CommonHeader(header: '基础组件'),
     );
 
-    CommonCenterItem item3 = CommonCenterItem(
-      title: '叠加组件Stack',
+    CommonItem item2 = CommonItem(
+      title: '叠加组件',
+      subTitle: 'Stack、IndexedStack',
       onTap: (item) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return StackPage();
         }));
       },
     );
-
-    CommonCenterItem item4 = CommonCenterItem(
-      title: '流式组件Wrap',
+    CommonItem item3 = CommonItem(
+      title: '流式组件',
+      subTitle: 'Wrap',
       onTap: (item) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return WrapPage();
@@ -146,8 +157,9 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonCenterItem item40 = CommonCenterItem(
-      title: '自定义组件Flow',
+    CommonItem item4 = CommonItem(
+      title: '自定义组件',
+      subTitle: 'Flow',
       onTap: (item) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return FlowPage();
@@ -155,9 +167,9 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group1 = CommonGroup(
-      items: [item3, item4, item40],
-      header: CommonHeader(header: 'section1 header'),
+    CommonGroup group2 = CommonGroup(
+      items: [item2, item3, item4],
+      header: CommonHeader(header: '布局组件'),
     );
 
     CommonItem item5 = CommonItem(
@@ -180,7 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item60 = CommonItem(
+    CommonItem item7 = CommonItem(
       title: '柱状图',
       subTitle: '实例',
       onTap: (item) {
@@ -190,31 +202,13 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group2 = CommonGroup(
-      items: [item5, item6, item60],
-      headerHeight: 10.0,
-      footer: CommonFooter(footer: 'section2 footer'),
+    CommonGroup group3 = CommonGroup(
+      items: [item5, item6, item7],
+      header: CommonHeader(header: '定位装饰权重组件'),
+      // footer: CommonFooter(footer: 'section2 footer'),
     );
 
-    // CommonImageItem item7 = CommonImageItem(
-    //   imageUrl:
-    //       'http://tva3.sinaimg.cn/crop.0.6.264.264.180/93276e1fjw8f5c6ob1pmpj207g07jaa5.jpg',
-    //   title: '7',
-    //   width: 66.0,
-    //   height: 66.0,
-    //   padding: EdgeInsets.symmetric(
-    //     horizontal: 16,
-    //     vertical: 8,
-    //   ),
-    // );
-
-    // CommonImageItem item8 = CommonImageItem(
-    //   imageUrl: 'assets/images/About_WeChat_AppIcon_64x64.png',
-    //   title: '8',
-    //   width: 32.0,
-    //   height: 32.0,
-    // );
-    CommonItem item7 = CommonItem(
+    CommonItem item8 = CommonItem(
       title: '手势组件',
       subTitle: 'GestureDetector、InkWell、Listener',
       onTap: (item) {
@@ -224,45 +218,68 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group3 = CommonGroup(
-      items: [item7],
-    );
-
-    CommonRadioItem item9 = CommonRadioItem(
-      title: '9',
-      value: false,
-      onTap: (item) {},
-    );
-
-    CommonRadioItem item10 = CommonRadioItem(
-      title: '10',
-      value: true,
-      onTap: (item) {},
-    );
-
     CommonGroup group4 = CommonGroup(
-      items: [item9, item10],
-      headerHeight: 10.0,
+      items: [item8],
+      header: CommonHeader(header: '手势识别组件'),
     );
 
-    CommonBtnItem item11 = CommonBtnItem(
-      title: '11',
-      btnTitle: '随便吧',
-      btnTap: (item) {
-        print('点击了item11中的按钮');
-      },
+    CommonItem item9 = CommonItem(
+      title: 'ListView组件',
+      subTitle: 'ListView',
       onTap: (item) {
-        print('点击了item11');
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return ListViewPage();
+        }));
+      },
+    );
+
+    CommonItem item10 = CommonItem(
+      title: 'GridView组件',
+      subTitle: 'GridView',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return GridViewPage();
+        }));
+      },
+    );
+
+    CommonItem item11 = CommonItem(
+      title: 'PageView组件',
+      subTitle: 'PageView',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return PageViewPage();
+        }));
+      },
+    );
+
+    CommonItem item12 = CommonItem(
+      title: '滚动条组件',
+      subTitle: 'scrollbar',
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return ScrollBarPage();
+        }));
       },
     );
 
     CommonGroup group5 = CommonGroup(
-      items: [item11],
-      headerHeight: 10.0,
+      items: [item8, item9, item10, item11, item12],
+      header: CommonHeader(header: '滚动和大数据组件'),
+    );
+
+    CommonItem item13 = CommonItem(
+      title: 'SliverList/SliverGrid',
+      onTap: (item) {},
+    );
+
+    CommonGroup group6 = CommonGroup(
+      items: [item13],
+      header: CommonHeader(header: 'Sliver系列组件'),
     );
 
     setState(() {
-      dataSource = [group0, group1, group2, group3, group4, group5];
+      dataSource = [group0, group1, group2, group3, group4, group5, group6];
     });
   }
 }
