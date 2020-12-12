@@ -1,0 +1,21 @@
+[
+    {
+        "items":[
+            {
+                "title":"文本组件",
+                "subTitle":"text、RichText、TextField",
+                "iconStr":"assets/images/football_check.png",
+                "pageRouter":"1",
+                "tapHighlight":true
+            },
+            {
+                "title":"基础组件",
+                "subTitle":"Button、Switch、Progress",
+                "iconStr":"assets/images/basketball_check.png",
+                "pageRouter":"2",
+                "tapHighlight":true
+            }
+        ],
+        "header":"文本组件"
+    }
+]

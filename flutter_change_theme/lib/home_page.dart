@@ -1,10 +1,14 @@
+import 'dart:convert';
+
 import 'package:flustars/flustars.dart' hide ScreenUtil;
 import 'package:flutter/material.dart';
-import 'package:flutter_change_theme/common/common_footer.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_change_theme/common/common_group.dart';
 import 'package:flutter_change_theme/common/common_header.dart';
 import 'package:flutter_change_theme/common/common_item.dart';
 import 'package:flutter_change_theme/constant/constant.dart';
+import 'package:flutter_change_theme/models/home_model/home_model_group.dart';
+import 'package:flutter_change_theme/models/home_model/home_model_item.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
 import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
 import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
@@ -15,6 +19,7 @@ import 'package:flutter_change_theme/pages/gridview_page/gridview_page.dart';
 import 'package:flutter_change_theme/pages/listview_page/listview_page.dart';
 import 'package:flutter_change_theme/pages/page_view_page/page_view_page.dart';
 import 'package:flutter_change_theme/pages/scrollbar_page/scrollbar_page.dart';
+import 'package:flutter_change_theme/pages/sliver_list_grid/sliver_list_grid_page.dart';
 import 'package:flutter_change_theme/pages/stack_page/stack_page.dart';
 import 'package:flutter_change_theme/pages/text_page/text_page.dart';
 import 'package:flutter_change_theme/pages/wrap_page/wrap_page.dart';
@@ -45,7 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    getData();
+    // getData();
+    getJsonData();
     super.initState();
     WidgetUtil widgetUtil = new WidgetUtil();
     widgetUtil.asyncPrepares(true, (_) async {
@@ -101,6 +107,34 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
     );
+  }
+
+  void getJsonData() async {
+    rootBundle.loadString('jsondatas/homepage.json').then((jsonStr) {
+      final List homepageJson = json.decode(jsonStr);
+
+      homepageJson.forEach((json) {
+        final HomeModelGroup modelGroup = HomeModelGroup.fromJson(json);
+        List<CommonItem> items = modelGroup.items.map((e) {
+          CommonItem comItem = CommonItem(
+            title: e.title,
+            subTitle: e.subTitle,
+            tapHighlight: e.tapHighlight,
+            onTap: (item) {
+              print('${e.pageRouter}');
+            },
+          );
+          return comItem;
+        }).toList();
+        CommonGroup group = CommonGroup(
+          items: items,
+          header: CommonHeader(header: modelGroup.header),
+        );
+        dataSource.add(group);
+      });
+
+      setState(() {});
+    });
   }
 
   void getData() {
@@ -270,7 +304,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     CommonItem item13 = CommonItem(
       title: 'SliverList/SliverGrid',
-      onTap: (item) {},
+      onTap: (item) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return SliverListGridPage();
+        }));
+      },
     );
 
     CommonGroup group6 = CommonGroup(
