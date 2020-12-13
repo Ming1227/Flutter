@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
+import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
+import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
+import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
+import 'package:flutter_change_theme/pages/expand_page/expand_page.dart';
+import 'package:flutter_change_theme/pages/flow_page/flow_page.dart';
+import 'package:flutter_change_theme/pages/gesture_page/gesture_page.dart';
+import 'package:flutter_change_theme/pages/gridview_page/gridview_page.dart';
+import 'package:flutter_change_theme/pages/listview_page/listview_page.dart';
+import 'package:flutter_change_theme/pages/page_view_page/page_view_page.dart';
+import 'package:flutter_change_theme/pages/scrollbar_page/scrollbar_page.dart';
+import 'package:flutter_change_theme/pages/sliver_appbar/sliver_appbar.dart';
+import 'package:flutter_change_theme/pages/sliver_list_grid/sliver_list_grid_page.dart';
+import 'package:flutter_change_theme/pages/stack_page/stack_page.dart';
+import 'package:flutter_change_theme/pages/text_page/text_page.dart';
+import 'package:flutter_change_theme/pages/wrap_page/wrap_page.dart';
 import 'package:flutter_change_theme/providers/theme_info_providers.dart';
 import 'package:provider/provider.dart';
 
@@ -62,7 +77,31 @@ class MyApp extends StatelessWidget {
               floatingActionButtonTheme:
                   FloatingActionButtonThemeData(backgroundColor: _themeColor),
             ),
-            home: MyHomePage(title: 'Flutter Theme Change demo'),
+            // home: MyHomePage(title: 'Flutter Theme Change demo'),
+            routes: {
+              '/': (context) => MyHomePage(),
+              'text_page': (context) => TextPage(),
+              'basic_page': (context) => BasicWidgetPage(),
+              'stack_page': (context) => StackPage(),
+              'wrap_page': (context) => WrapPage(),
+              'flow_page': (context) => FlowPage(),
+              'container_page': (context) => ContainerSizePage(),
+              'expand_page': (context) => ExpandPage(),
+              'cylinder_chart_page': (context) => CylinderChartPage(),
+              'gesture_page': (context) => GesturePage(),
+              'listview_page': (context) => ListViewPage(),
+              'gridview_page': (context) => GridViewPage(),
+              'pageview_page': (context) => PageViewPage(),
+              'scrollbar_page': (context) => ScrollBarPage(),
+              'sliver_list_grid_page': (context) => SliverListGridPage(),
+              'sliver_appbar_page': (context) => SliverAppBarPage(),
+            },
+            onGenerateRoute: (settings) {
+              return MaterialPageRoute(builder: (context) {
+                String routeName = settings.name;
+                return Text('未注册$routeName');
+              });
+            },
           );
         },
       ),

@@ -8,7 +8,6 @@ import 'package:flutter_change_theme/common/common_header.dart';
 import 'package:flutter_change_theme/common/common_item.dart';
 import 'package:flutter_change_theme/constant/constant.dart';
 import 'package:flutter_change_theme/models/home_model/home_model_group.dart';
-import 'package:flutter_change_theme/models/home_model/home_model_item.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
 import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
 import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
@@ -120,8 +119,9 @@ class _MyHomePageState extends State<MyHomePage> {
             title: e.title,
             subTitle: e.subTitle,
             tapHighlight: e.tapHighlight,
+            icon: e.iconStr,
             onTap: (item) {
-              print('${e.pageRouter}');
+              Navigator.pushNamed(context, e.pageRouter);
             },
           );
           return comItem;
@@ -298,7 +298,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     CommonGroup group5 = CommonGroup(
-      items: [item8, item9, item10, item11, item12],
+      items: [item9, item10, item11, item12],
       header: CommonHeader(header: '滚动和大数据组件'),
     );
 

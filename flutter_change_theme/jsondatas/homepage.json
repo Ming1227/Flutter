@@ -5,17 +5,120 @@
                 "title":"文本组件",
                 "subTitle":"text、RichText、TextField",
                 "iconStr":"assets/images/football_check.png",
-                "pageRouter":"1",
+                "pageRouter":"text_page",
                 "tapHighlight":true
             },
             {
                 "title":"基础组件",
                 "subTitle":"Button、Switch、Progress",
                 "iconStr":"assets/images/basketball_check.png",
-                "pageRouter":"2",
+                "pageRouter":"basic_page",
                 "tapHighlight":true
             }
         ],
         "header":"文本组件"
+    },
+    {
+        "items":[
+            {
+                "title":"叠加组件",
+                "subTitle":"Stack、IndexedStack",
+                "pageRouter":"stack_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"流式组件",
+                "subTitle":"Wrap",
+                "pageRouter":"wrap_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"自定义组件",
+                "subTitle":"Flow",
+                "pageRouter":"flow_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"布局组件"
+    },
+    {
+        "items":[
+            {
+                "title":"定位装饰组件",
+                "subTitle":"Container",
+                "pageRouter":"container_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"权重组件",
+                "subTitle":"Flexible、Expand、Spacer",
+                "pageRouter":"expand_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"柱状图",
+                "subTitle":"实例",
+                "pageRouter":"cylinder_chart_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"定位装饰权重组件"
+    },
+    {
+        "items":[
+            {
+                "title":"手势组件",
+                "subTitle":"GestureDetector、InkWell、Listener",
+                "pageRouter":"gesture_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"手势识别组件"
+    },
+    {
+        "items":[
+            {
+                "title":"ListView组件",
+                "subTitle":"ListView",
+                "pageRouter":"listview_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"GridView组件",
+                "subTitle":"GridView",
+                "pageRouter":"gridview_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"PageView组件",
+                "subTitle":"PageView",
+                "pageRouter":"pageview_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"滚动条组件",
+                "subTitle":"scrollbar",
+                "pageRouter":"scrollbar_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"滚动和大数据组件"
+    },
+    {
+        "items":[
+            {
+                "title":"SliverListGrid",
+                "subTitle":"Sliver",
+                "pageRouter":"sliver_list_grid_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"SliverAppBar",
+                "subTitle":"Sliver",
+                "pageRouter":"sliver_appbar_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"Sliver系列组件"
     }
 ]
