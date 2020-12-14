@@ -115,7 +115,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       child: Padding(
         padding: EdgeInsets.only(right: ScreenAdapter.width(16)),
         child: _buildCommonIconWidget(item.icon,
-            iconColor: Theme.of(context).backgroundColor),
+            iconColor: Theme.of(context).accentColor),
       ),
     );
 

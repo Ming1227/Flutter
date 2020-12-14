@@ -96,6 +96,12 @@
                 "tapHighlight":true
             },
             {
+                "title":"自定义PageView",
+                "subTitle":"类似广告滑动",
+                "pageRouter":"as_pageview_page",
+                "tapHighlight":true
+            },
+            {
                 "title":"滚动条组件",
                 "subTitle":"scrollbar",
                 "pageRouter":"scrollbar_page",
@@ -114,11 +120,34 @@
             },
             {
                 "title":"SliverAppBar",
-                "subTitle":"Sliver",
+                "subTitle":"Navigation滚动自动隐藏",
                 "pageRouter":"sliver_appbar_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"SliverPersistentHeader",
+                "subTitle":"头部滚动后可悬浮",
+                "pageRouter":"sliver_persistent_head_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"NetedScrollView",
+                "subTitle":"可在内部嵌套滚动视图",
+                "pageRouter":"nested_scrollview_page",
                 "tapHighlight":true
             }
         ],
         "header":"Sliver系列组件"
+    },
+    {
+        "items":[
+            {
+                "title":"日期选择器",
+                "subTitle":"datePicker",
+                "pageRouter":"datePicker_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"功能型组件"
     }
 ]

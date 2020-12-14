@@ -5,4 +5,8 @@ class Constant {
 
   /// 主边距
   static const double pEdgeInset = 15.0;
+
+  static const String jsondatas = 'jsondatas/';
+
+  static const String adhots = 'assets/adhots/';
 }

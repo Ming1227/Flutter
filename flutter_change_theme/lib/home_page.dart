@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getJsonData() async {
-    rootBundle.loadString('jsondatas/homepage.json').then((jsonStr) {
+    rootBundle.loadString(Constant.jsondatas + 'homepage.json').then((jsonStr) {
       final List homepageJson = json.decode(jsonStr);
 
       homepageJson.forEach((json) {

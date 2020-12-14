@@ -23,7 +23,7 @@ class ASColor {
   static const Map<String, Map> datas = {
     'white': {
       'theme': Colors.white,
-      'accent': Colors.blue,
+      'accent': Colors.purple,
       'background': Colors.white,
       'title': Colors.black,
       'subTitle': Colors.black26,
@@ -31,7 +31,7 @@ class ASColor {
     },
     'black': {
       'theme': Colors.black,
-      'accent': Colors.green,
+      'accent': Colors.yellow,
       'background': Colors.black,
       'title': Colors.white,
       'subTitle': Colors.white24,

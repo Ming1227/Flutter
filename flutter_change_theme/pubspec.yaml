@@ -56,7 +56,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - jsondatas/
     - assets/images/icon_selected_20x20.png
     - assets/images/default_100x100.png
     - assets/images/tableview_arrow_8x13.png
@@ -64,6 +63,9 @@ flutter:
     - assets/images/basketball_check.png
     - assets/images/check_open.png
     - assets/images/football_check.png
+    
+    - jsondatas/
+    - assets/adhots/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
