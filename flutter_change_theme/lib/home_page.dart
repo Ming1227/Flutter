@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flustars/flustars.dart' hide ScreenUtil;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_change_theme/common/common_footer.dart';
 import 'package:flutter_change_theme/common/common_group.dart';
 import 'package:flutter_change_theme/common/common_header.dart';
 import 'package:flutter_change_theme/common/common_item.dart';
@@ -25,6 +26,7 @@ import 'package:flutter_change_theme/pages/wrap_page/wrap_page.dart';
 import 'package:flutter_change_theme/select_color/select_color_page.dart';
 import 'package:flutter_change_theme/utils/screen_adapter.dart';
 import 'package:flutter_change_theme/widgets/common/common_group_widget.dart';
+import 'package:flutter_change_theme/widgets/sizebox/sizebox.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -67,6 +69,55 @@ class _MyHomePageState extends State<MyHomePage> {
     _init();
 
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(5),
+              height: 200,
+              decoration: BoxDecoration(
+                color: Theme.of(context).accentColor,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.asset(Constant.adhots + 'adhots_6.jpg'),
+            ),
+            ASSizeBox(),
+            ListTile(
+              tileColor: Colors.yellow,
+              leading: Icon(Icons.check_box),
+              title: Text('data1'),
+              subtitle: Text('sub1'),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 18,
+              ),
+            ),
+            ASSizeBox(),
+            ListTile(
+              tileColor: Colors.blue,
+              leading: Icon(Icons.check_box),
+              title: Text('data2'),
+              subtitle: Text('sub2'),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 18,
+              ),
+            ),
+            ASSizeBox(),
+            ListTile(
+              tileColor: Colors.amber,
+              leading: Icon(Icons.check_box),
+              title: Text('data3'),
+              subtitle: Text('sub3'),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 18,
+              ),
+            ),
+            ASSizeBox(),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text('切换主题Demo'),
         actions: [
@@ -128,7 +179,12 @@ class _MyHomePageState extends State<MyHomePage> {
         }).toList();
         CommonGroup group = CommonGroup(
           items: items,
-          header: CommonHeader(header: modelGroup.header),
+          header: (modelGroup.header == null || modelGroup.header.isEmpty)
+              ? null
+              : CommonHeader(header: modelGroup.header),
+          footer: (modelGroup.footer == null || modelGroup.footer.isEmpty)
+              ? null
+              : CommonFooter(footer: modelGroup.footer),
         );
         dataSource.add(group);
       });

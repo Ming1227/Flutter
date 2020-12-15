@@ -354,6 +354,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       text,
       style: Theme.of(context).textTheme.headline6,
       textAlign: textAlign,
+      maxLines: 2,
     );
   }
 
@@ -370,6 +371,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
         style: Theme.of(context).textTheme.subtitle2,
         textAlign: textAlign,
         overflow: TextOverflow.ellipsis,
+        maxLines: 2,
       ),
     );
   }

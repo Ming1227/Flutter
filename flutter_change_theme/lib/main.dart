@@ -3,11 +3,14 @@ import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
 import 'package:flutter_change_theme/pages/as_pageview_page/as_pageview_page.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
+import 'package:flutter_change_theme/pages/caculator_page/caculator_page.dart';
 import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
 import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
 import 'package:flutter_change_theme/pages/expand_page/expand_page.dart';
 import 'package:flutter_change_theme/pages/flow_page/flow_page.dart';
 import 'package:flutter_change_theme/pages/function_type/date_picker_page/date_picker_page.dart';
+import 'package:flutter_change_theme/pages/function_type/pop_menu_page/pop_menu_page.dart';
+import 'package:flutter_change_theme/pages/function_type/time_picker_page/time_picker_page.dart';
 import 'package:flutter_change_theme/pages/gesture_page/gesture_page.dart';
 import 'package:flutter_change_theme/pages/gridview_page/gridview_page.dart';
 import 'package:flutter_change_theme/pages/listview_page/listview_page.dart';
@@ -54,6 +57,8 @@ class MyApp extends StatelessWidget {
           final bodyColor = map['body'];
           return MaterialApp(
             title: 'Flutter Demo',
+            // debugShowMaterialGrid: true,
+            // showPerformanceOverlay: true,
             theme: ThemeData(
               primaryColor: _themeColor,
               accentColor: accentColor,
@@ -62,7 +67,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: bgColor,
               buttonTheme: ButtonThemeData(
                 buttonColor: accentColor,
-                minWidth: 44,
+                minWidth: 60,
               ),
               textTheme: TextTheme(
                   headline6: TextStyle(
@@ -105,6 +110,9 @@ class MyApp extends StatelessWidget {
                   SliverPersistentHeadPage(),
               'nested_scrollview_page': (context) => NestedScrollViewPage(),
               'datePicker_page': (context) => ASDataPickerPage(),
+              'timePicker_page': (context) => TimePickerPage(),
+              'pop_menu_page': (context) => PopMenuPage(),
+              'easy_caculator_page': (context) => CaculatorPage(),
             },
             onGenerateRoute: (settings) {
               return MaterialPageRoute(builder: (context) {

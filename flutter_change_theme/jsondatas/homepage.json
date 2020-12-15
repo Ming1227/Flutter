@@ -146,8 +146,30 @@
                 "subTitle":"datePicker",
                 "pageRouter":"datePicker_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"时间选择器",
+                "subTitle":"timePicker",
+                "pageRouter":"timePicker_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"弹出视图和shape",
+                "subTitle":"菜单框、提示框、警告框、shape",
+                "pageRouter":"pop_menu_page",
+                "tapHighlight":true
             }
         ],
         "header":"功能型组件"
+    },
+    {
+        "items":[
+            {
+                "title":"计算器",
+                "subTitle":"简易计算器",
+                "pageRouter":"easy_caculator_page",
+                "tapHighlight":true
+            }
+        ]
     }
 ]
