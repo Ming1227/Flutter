@@ -11,7 +11,7 @@ class NestedScrollViewPage extends StatefulWidget {
 }
 
 class _NestedScrollViewPageState extends State<NestedScrollViewPage>
-    with TickerProviderStateMixin {
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
   List<String> _adList = [
     Constant.adhots + 'adhots_2.jpg',

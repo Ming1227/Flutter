@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
+import 'package:flutter_change_theme/pages/animation/basic_animation_page/basic_animation_page.dart';
+import 'package:flutter_change_theme/pages/animation/interval_animation_page/interval_animation_page.dart';
+import 'package:flutter_change_theme/pages/animation/list_animation_page/list_animation_page.dart';
+import 'package:flutter_change_theme/pages/animation/record_animation_page/record_animation_page.dart';
 import 'package:flutter_change_theme/pages/as_pageview_page/as_pageview_page.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
 import 'package:flutter_change_theme/pages/caculator_page/caculator_page.dart';
@@ -113,6 +117,10 @@ class MyApp extends StatelessWidget {
               'timePicker_page': (context) => TimePickerPage(),
               'pop_menu_page': (context) => PopMenuPage(),
               'easy_caculator_page': (context) => CaculatorPage(),
+              'basic_animation_page': (context) => BasicAnimationPage(),
+              'interval_animation_page': (context) => IntervalAnimationPage(),
+              'record_animation_page': (context) => RecordAnimationPage(),
+              'list_animation_page': (context) => ListAnimationPage(),
             },
             onGenerateRoute: (settings) {
               return MaterialPageRoute(builder: (context) {

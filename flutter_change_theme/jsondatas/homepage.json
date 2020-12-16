@@ -171,5 +171,34 @@
                 "tapHighlight":true
             }
         ]
+    },
+    {
+        "items":[
+            {
+                "title":"动画的记录",
+                "subTitle":"动画组件（显示、隐式）",
+                "pageRouter":"record_animation_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"动画核心",
+                "subTitle":"AnimationController、Tween、Curve",
+                "pageRouter":"basic_animation_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"动画序列",
+                "subTitle":"组合动画TweenSequence",
+                "pageRouter":"interval_animation_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"列表动画",
+                "subTitle":"AnimatedList",
+                "pageRouter":"list_animation_page",
+                "tapHighlight":true
+            }
+        ],
+        "header":"动画"
     }
 ]
