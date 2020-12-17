@@ -10,7 +10,7 @@ class BasicWidgetPage extends StatefulWidget {
 
 class _BasicWidgetPageState extends State<BasicWidgetPage> {
   String _groupValue = '足球';
-  List<bool> _checkValues = [true, false];
+  final List<bool> _checkValues = [true, false];
   double _sliderValue = 1.0;
   RangeValues _rangeValues = RangeValues(0, 60);
   var _switchValue = false;

@@ -7,17 +7,17 @@ class ListAnimationPage extends StatefulWidget {
 
 class _ListAnimationPageState extends State<ListAnimationPage>
     with SingleTickerProviderStateMixin {
-  List<int> _list = [];
+  final List<int> _list = [];
   final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
 
   void _addItem() {
-    final int _index = _list.length;
+    final _index = _list.length;
     _list.insert(_index, _index);
     _listKey.currentState.insertItem(_index);
   }
 
   void _removeItem() {
-    final int _index = _list.length - 1;
+    final _index = _list.length - 1;
     var item = _list[_index].toString();
     _listKey.currentState.removeItem(
         _index, (context, animation) => _buildItem(item, animation));

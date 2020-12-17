@@ -7,9 +7,9 @@ class HomeModelGroup {
 
   HomeModelGroup.fromJson(Map<String, dynamic> json) {
     if (json['items'] != null) {
-      items = new List<HomeModelItem>();
+      items = <HomeModelItem>[];
       json['items'].forEach((value) {
-        items.add(new HomeModelItem.fromJson(value));
+        items.add(HomeModelItem.fromJson(value));
       });
     }
     if (json['header'] != null) {
@@ -21,15 +21,15 @@ class HomeModelGroup {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.header != null) {
-      data['header'] = this.header;
+    final data = <String, dynamic>{};
+    if (header != null) {
+      data['header'] = header;
     }
-    if (this.footer != null) {
-      data['footer'] = this.footer;
+    if (footer != null) {
+      data['footer'] = footer;
     }
-    if (this.items != null) {
-      data['items'] = this.items.map((e) => e.toJson()).toList();
+    if (items != null) {
+      data['items'] = items.map((e) => e.toJson()).toList();
     }
     return data;
   }

@@ -197,6 +197,18 @@
                 "subTitle":"AnimatedList",
                 "pageRouter":"list_animation_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"过渡动画",
+                "subTitle":"Hero",
+                "pageRouter":"hero_animation_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"容器转换模式",
+                "subTitle":"MaterialMotion",
+                "pageRouter":"material_mation_page",
+                "tapHighlight":true
             }
         ],
         "header":"动画"

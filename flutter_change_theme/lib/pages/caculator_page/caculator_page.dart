@@ -81,7 +81,7 @@ class _CaculatorPageState extends State<CaculatorPage> {
         }
         break;
       case '%':
-        double d = _value2Double(_text);
+        var d = _value2Double(_text);
         _isResult = true;
         _text = '${d / 100.0}';
         break;
@@ -119,8 +119,8 @@ class _CaculatorPageState extends State<CaculatorPage> {
         break;
 
       case '=':
-        double d = _value2Double(_beforeText);
-        double d1 = _value2Double(_text);
+        var d = _value2Double(_beforeText);
+        var d1 = _value2Double(_text);
         switch (_oprateText) {
           case '+':
             _text = '${d + d1}';
@@ -145,7 +145,7 @@ class _CaculatorPageState extends State<CaculatorPage> {
 
   double _value2Double(String value) {
     if (_text.startsWith('-')) {
-      String s = value.substring(1);
+      final s = value.substring(1);
       return double.parse(s) * -1;
     } else {
       return double.parse(value);

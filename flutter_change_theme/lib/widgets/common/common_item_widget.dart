@@ -37,7 +37,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final CommonItem item = widget.item;
+    final item = widget.item;
     return GestureDetector(
       onTapDown: item.tapHighlight ? _handleTapDown : null,
       onTap: _handleOnTap,
@@ -109,7 +109,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
 
   /// 构建item组件
   Widget _buildItem(CommonItem item) {
-    bool offstageIcon = ASUtils.isEmptyString(item.icon);
+    var offstageIcon = ASUtils.isEmptyString(item.icon);
     Widget iconWidget = Offstage(
       offstage: offstageIcon,
       child: Padding(
@@ -140,7 +140,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       ),
     );
 
-    Widget arrowWidget = _buildCommonRightArrowWidget();
+    var arrowWidget = _buildCommonRightArrowWidget();
 
     return Row(
         children: [iconWidget, titleWidget, subtitleWidget, arrowWidget]);
@@ -163,7 +163,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
 
   /// 构建 switch组件
   Widget _buildSwitchItem(CommonSwitchItem item) {
-    bool offstageIcon = ASUtils.isEmptyString(item.icon);
+    var offstageIcon = ASUtils.isEmptyString(item.icon);
     Widget iconWidget = Offstage(
       offstage: offstageIcon,
       child: Padding(
@@ -216,7 +216,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       ),
     );
 
-    bool offstageIcon = !item.value;
+    var offstageIcon = !item.value;
     Widget iconWidget = Offstage(
       offstage: offstageIcon,
       child: Padding(
@@ -244,9 +244,9 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       ),
     );
 
-    Widget arrowWidget = _buildCommonRightArrowWidget();
+    var arrowWidget = _buildCommonRightArrowWidget();
 
-    bool offstageIcon = ASUtils.isEmptyString(item.imageUrl);
+    var offstageIcon = ASUtils.isEmptyString(item.imageUrl);
     Widget iconWidget = Offstage(
       offstage: offstageIcon,
       child: Padding(
@@ -339,7 +339,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       ),
     );
 
-    Widget arrowWidget = _buildCommonRightArrowWidget();
+    var arrowWidget = _buildCommonRightArrowWidget();
 
     return Row(children: [titleWidget, btnWidget, arrowWidget]);
   }

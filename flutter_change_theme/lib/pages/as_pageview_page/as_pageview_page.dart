@@ -8,7 +8,7 @@ class ASPageViewPage extends StatefulWidget {
 }
 
 class _ASPageViewPageState extends State<ASPageViewPage> {
-  var _imgList = [
+  final _imgList = [
     Constant.adhots + 'adhots_2.jpg',
     Constant.adhots + 'adhots_3.jpg',
     Constant.adhots + 'adhots_5.jpg',

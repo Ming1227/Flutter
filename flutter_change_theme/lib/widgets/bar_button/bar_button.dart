@@ -55,6 +55,7 @@ class BarButton extends StatefulWidget {
   /// 点击事件
   final VoidCallback onTap;
 
+  @override
   _BarButtonState createState() => _BarButtonState();
 }
 

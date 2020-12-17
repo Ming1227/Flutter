@@ -7,7 +7,7 @@ class ThemeInfoProvider extends ChangeNotifier {
   int _themeFontSize = 16;
   int get themeFontSize => _themeFontSize;
 
-  setThemeColor(String themeColor) {
+  void setThemeColor(String themeColor) {
     if (_themeColor != themeColor) {
       print('监听颜色主题变化$themeColor');
       _themeColor = themeColor;
@@ -15,7 +15,7 @@ class ThemeInfoProvider extends ChangeNotifier {
     }
   }
 
-  setThemeFontSize(int fontSize) {
+  void setThemeFontSize(int fontSize) {
     if (_themeFontSize != fontSize) {
       print('监听字体大小变化');
       _themeFontSize = fontSize;

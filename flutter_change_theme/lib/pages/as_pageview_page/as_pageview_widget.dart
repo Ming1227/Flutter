@@ -54,7 +54,7 @@ class _ASPageViewWidgetState extends State<ASPageViewWidget> {
   }
 
   Widget buildChildPageItem(int index) {
-    Matrix4 matrix4 = Matrix4.identity();
+    var matrix4 = Matrix4.identity();
     if (index == _currentPageValue.floor()) {
       var currScale =
           1 - (_currentPageValue - index) * (1 - widget.scaleFactor);

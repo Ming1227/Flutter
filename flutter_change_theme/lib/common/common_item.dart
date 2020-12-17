@@ -44,15 +44,15 @@ class CommonSwitchItem extends CommonItem {
   final String cacheKey;
   // 取值
   Future<bool> getOn() async {
-    SharedPreferences sp = await SharedPreferences.getInstance();
-    bool value = sp.getBool(cacheKey);
-    return value == null ? false : value;
+    var sp = await SharedPreferences.getInstance();
+    var value = sp.getBool(cacheKey);
+    return value ?? false;
   }
 
   // 存值
   void setOn(bool value) async {
-    SharedPreferences sp = await SharedPreferences.getInstance();
-    sp.setBool(cacheKey, value);
+    var sp = await SharedPreferences.getInstance();
+    await sp.setBool(cacheKey, value);
   }
 
   CommonSwitchItem({String title, String icon, @required this.cacheKey})

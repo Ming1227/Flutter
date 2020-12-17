@@ -8,14 +8,14 @@ class BasicAnimationPage extends StatefulWidget {
 
 class _BasicAnimationPageState extends State<BasicAnimationPage>
     with TickerProviderStateMixin {
-  double _size = 100;
+  // double _size = 100;
   AnimationController _controller;
 
-  Color _color = Colors.blue;
-  Color _startColor = Colors.blue;
-  Color _endColor = Colors.purple;
+  // Color _color = Colors.blue;
+  // Color _startColor = Colors.blue;
+  // Color _endColor = Colors.purple;
 
-  Animation<Color> _animation;
+  // Animation<Color> _animation;
   Animation _sizeAnimation;
 
   @override

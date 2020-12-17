@@ -8,7 +8,7 @@ class CaculatorKeyboard extends StatelessWidget {
   const CaculatorKeyboard({Key key, this.onValueChange}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    List<Map> listData = setListData();
+    var listData = setListData();
     return Wrap(
       runSpacing: ScreenAdapter.width(18),
       spacing: ScreenAdapter.height(18),
@@ -29,7 +29,7 @@ class CaculatorKeyboard extends StatelessWidget {
   }
 
   List<Map> setListData() {
-    final List<Map> _keyboardList = [
+    final _keyboardList = <Map>[
       {
         'text': 'AC',
         'textColor': Colors.black,

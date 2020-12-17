@@ -38,10 +38,15 @@ dependencies:
   flutter_screenutil: ^3.1.0
   # 图片缓存 https://github.com/renefloor/flutter_cached_network_image
   cached_network_image: ^2.3.3
+  # 动画Animations https://pub.dev/packages/animations
+  # Material Mation 规范 https://material.io/design/motion/the-motion-system.html
+  animations: ^1.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  pedantic: ^1.9.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -66,6 +71,7 @@ flutter:
     
     - jsondatas/
     - assets/adhots/
+    - assets/others/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

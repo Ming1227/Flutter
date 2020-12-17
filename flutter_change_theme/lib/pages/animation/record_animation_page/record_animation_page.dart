@@ -46,7 +46,7 @@ class RecordAnimationPage extends StatelessWidget {
   }
 
   Widget buildListFirst() {
-    List<String> list = [
+    final list = <String>[
       '1. 创建 AnimationController',
       '2. 监听 AnimationController，调用 setState 刷新UI',
       '3. 释放 AnimationController'
@@ -55,7 +55,7 @@ class RecordAnimationPage extends StatelessWidget {
   }
 
   Widget buildListLast() {
-    List<String> list = [
+    final list = <String>[
       '1. 判断你的动画组件是否一直重复，比如一直转圈的loading动画，如果是选择显式动画',
       '2. 判断你的动画组件是否需要多个组件联动，如果是选择显式动画',
       '3. 判断你的动画组件是否需要组合动画，如果是选择显式动画',
@@ -66,7 +66,7 @@ class RecordAnimationPage extends StatelessWidget {
   }
 
   Widget buildListView(List<String> list, double height) {
-    if (list.length == 0) {
+    if (list.isEmpty) {
       return SizedBox(
         height: 10,
       );

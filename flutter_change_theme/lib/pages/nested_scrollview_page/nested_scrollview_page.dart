@@ -13,7 +13,7 @@ class NestedScrollViewPage extends StatefulWidget {
 class _NestedScrollViewPageState extends State<NestedScrollViewPage>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
-  List<String> _adList = [
+  final _adList = <String>[
     Constant.adhots + 'adhots_2.jpg',
     Constant.adhots + 'adhots_3.jpg',
     Constant.adhots + 'adhots_5.jpg',
@@ -58,7 +58,7 @@ class _NestedScrollViewPageState extends State<NestedScrollViewPage>
                       ),
                     ],
                     labelColor: Theme.of(context).accentColor,
-                    controller: this._tabController,
+                    controller: _tabController,
                     indicatorColor: Colors.purple,
                   ),
                 ),
@@ -66,7 +66,7 @@ class _NestedScrollViewPageState extends State<NestedScrollViewPage>
             ];
           },
           body: TabBarView(
-            controller: this._tabController,
+            controller: _tabController,
             children: <Widget>[
               buildFootball(context),
               buildBasketball(context),
@@ -83,7 +83,7 @@ class _NestedScrollViewPageState extends State<NestedScrollViewPage>
       removeTop: true,
       child: ListView.separated(
         itemBuilder: (context, index) {
-          bool isshow = index != 0;
+          var isshow = index != 0;
           return Column(
             children: [
               Offstage(

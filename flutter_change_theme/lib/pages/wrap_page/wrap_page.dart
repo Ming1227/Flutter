@@ -44,9 +44,9 @@ class _WrapPageState extends State<WrapPage> {
         runSpacing: 5,
         // runAlignment: WrapAlignment.start,
         children: List.generate(15, (index) {
-          double w = 50.0 + 8 * index;
-          double h = 50.0 + 4 * index;
-          int i = index % Colors.primaries.length;
+          var w = 50.0 + 8 * index;
+          var h = 50.0 + 4 * index;
+          var i = index % Colors.primaries.length;
           return Container(
             color: Colors.primaries[i],
             height: h,

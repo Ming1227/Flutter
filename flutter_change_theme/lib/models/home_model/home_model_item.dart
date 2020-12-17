@@ -30,19 +30,19 @@ class HomeModelItem {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['title'] = this.title;
-    if (this.iconStr != null) {
-      data['iconStr'] = this.iconStr;
+    final data = <String, dynamic>{};
+    data['title'] = title;
+    if (iconStr != null) {
+      data['iconStr'] = iconStr;
     }
-    if (this.subTitle != null) {
-      data['subTitle'] = this.subTitle;
+    if (subTitle != null) {
+      data['subTitle'] = subTitle;
     }
-    if (this.pageRouter != null) {
-      data['pageRouter'] = this.pageRouter;
+    if (pageRouter != null) {
+      data['pageRouter'] = pageRouter;
     }
-    if (this.tapHighlight != null) {
-      data['tapHighlight'] = this.tapHighlight;
+    if (tapHighlight != null) {
+      data['tapHighlight'] = tapHighlight;
     }
     return data;
   }

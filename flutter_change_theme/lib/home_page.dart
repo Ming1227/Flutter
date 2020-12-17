@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // getData();
     getJsonData();
     super.initState();
-    WidgetUtil widgetUtil = new WidgetUtil();
+    var widgetUtil = WidgetUtil();
     widgetUtil.asyncPrepares(true, (_) async {
       await SpUtil.getInstance();
     });
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      String temp = SpUtil.getString(Constant.colorKey);
+                      var temp = SpUtil.getString(Constant.colorKey);
                       return SelectColorPage(
                         value: temp,
                       );
@@ -160,13 +160,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getJsonData() async {
-    rootBundle.loadString(Constant.jsondatas + 'homepage.json').then((jsonStr) {
+    await rootBundle
+        .loadString(Constant.jsondatas + 'homepage.json')
+        .then((jsonStr) {
       final List homepageJson = json.decode(jsonStr);
 
       homepageJson.forEach((json) {
-        final HomeModelGroup modelGroup = HomeModelGroup.fromJson(json);
-        List<CommonItem> items = modelGroup.items.map((e) {
-          CommonItem comItem = CommonItem(
+        final modelGroup = HomeModelGroup.fromJson(json);
+        var items = modelGroup.items.map((e) {
+          var comItem = CommonItem(
             title: e.title,
             subTitle: e.subTitle,
             tapHighlight: e.tapHighlight,
@@ -177,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
           );
           return comItem;
         }).toList();
-        CommonGroup group = CommonGroup(
+        var group = CommonGroup(
           items: items,
           header: (modelGroup.header == null || modelGroup.header.isEmpty)
               ? null
@@ -194,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getData() {
-    CommonItem item0 = CommonItem(
+    var item0 = CommonItem(
       title: '文本组件',
       subTitle: 'text、RichText、TextField',
       icon: 'assets/images/football_check.png',
@@ -207,12 +209,12 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group0 = CommonGroup(
+    var group0 = CommonGroup(
       items: [item0],
       header: CommonHeader(header: '文本组件'),
     );
 
-    CommonItem item1 = CommonItem(
+    var item1 = CommonItem(
       title: '基础组件',
       subTitle: 'Button、Switch、Progress',
       icon: 'assets/images/basketball_check.png',
@@ -223,12 +225,12 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group1 = CommonGroup(
+    var group1 = CommonGroup(
       items: [item1],
       header: CommonHeader(header: '基础组件'),
     );
 
-    CommonItem item2 = CommonItem(
+    var item2 = CommonItem(
       title: '叠加组件',
       subTitle: 'Stack、IndexedStack',
       onTap: (item) {
@@ -237,7 +239,7 @@ class _MyHomePageState extends State<MyHomePage> {
         }));
       },
     );
-    CommonItem item3 = CommonItem(
+    var item3 = CommonItem(
       title: '流式组件',
       subTitle: 'Wrap',
       onTap: (item) {
@@ -247,7 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item4 = CommonItem(
+    var item4 = CommonItem(
       title: '自定义组件',
       subTitle: 'Flow',
       onTap: (item) {
@@ -257,12 +259,12 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group2 = CommonGroup(
+    var group2 = CommonGroup(
       items: [item2, item3, item4],
       header: CommonHeader(header: '布局组件'),
     );
 
-    CommonItem item5 = CommonItem(
+    var item5 = CommonItem(
       title: '定位装饰组件',
       subTitle: 'Container',
       onTap: (item) {
@@ -272,7 +274,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item6 = CommonItem(
+    var item6 = CommonItem(
       title: '权重组件',
       subTitle: 'Flexible、Expand、Spacer',
       onTap: (item) {
@@ -282,7 +284,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item7 = CommonItem(
+    var item7 = CommonItem(
       title: '柱状图',
       subTitle: '实例',
       onTap: (item) {
@@ -292,13 +294,13 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group3 = CommonGroup(
+    var group3 = CommonGroup(
       items: [item5, item6, item7],
       header: CommonHeader(header: '定位装饰权重组件'),
       // footer: CommonFooter(footer: 'section2 footer'),
     );
 
-    CommonItem item8 = CommonItem(
+    var item8 = CommonItem(
       title: '手势组件',
       subTitle: 'GestureDetector、InkWell、Listener',
       onTap: (item) {
@@ -308,12 +310,12 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group4 = CommonGroup(
+    var group4 = CommonGroup(
       items: [item8],
       header: CommonHeader(header: '手势识别组件'),
     );
 
-    CommonItem item9 = CommonItem(
+    var item9 = CommonItem(
       title: 'ListView组件',
       subTitle: 'ListView',
       onTap: (item) {
@@ -323,7 +325,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item10 = CommonItem(
+    var item10 = CommonItem(
       title: 'GridView组件',
       subTitle: 'GridView',
       onTap: (item) {
@@ -333,7 +335,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item11 = CommonItem(
+    var item11 = CommonItem(
       title: 'PageView组件',
       subTitle: 'PageView',
       onTap: (item) {
@@ -343,7 +345,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonItem item12 = CommonItem(
+    var item12 = CommonItem(
       title: '滚动条组件',
       subTitle: 'scrollbar',
       onTap: (item) {
@@ -353,12 +355,12 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group5 = CommonGroup(
+    var group5 = CommonGroup(
       items: [item9, item10, item11, item12],
       header: CommonHeader(header: '滚动和大数据组件'),
     );
 
-    CommonItem item13 = CommonItem(
+    var item13 = CommonItem(
       title: 'SliverList/SliverGrid',
       onTap: (item) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
@@ -367,7 +369,7 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
 
-    CommonGroup group6 = CommonGroup(
+    var group6 = CommonGroup(
       items: [item13],
       header: CommonHeader(header: 'Sliver系列组件'),
     );

@@ -15,9 +15,9 @@ class CommonGroup {
 
   CommonGroup({
     this.header,
-    this.headerHeight = 10.0,
+    this.headerHeight = 20.0,
     this.footer,
-    this.footerHeight = 10.0,
+    this.footerHeight = 0.0,
     this.items = const <CommonItem>[],
   });
 }

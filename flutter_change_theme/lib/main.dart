@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
 import 'package:flutter_change_theme/pages/animation/basic_animation_page/basic_animation_page.dart';
+import 'package:flutter_change_theme/pages/animation/hero_animation_page/hero_animation_page1.dart';
 import 'package:flutter_change_theme/pages/animation/interval_animation_page/interval_animation_page.dart';
 import 'package:flutter_change_theme/pages/animation/list_animation_page/list_animation_page.dart';
+import 'package:flutter_change_theme/pages/animation/material_motion_page/material_motion_page.dart';
 import 'package:flutter_change_theme/pages/animation/record_animation_page/record_animation_page.dart';
 import 'package:flutter_change_theme/pages/as_pageview_page/as_pageview_page.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<ThemeInfoProvider>(
         builder: (context, themeInfo, child) {
-          String colorKey = themeInfo.themeColor;
+          var colorKey = themeInfo.themeColor;
           if (colorKey.isEmpty) {
             colorKey = 'white';
           }
@@ -121,10 +123,12 @@ class MyApp extends StatelessWidget {
               'interval_animation_page': (context) => IntervalAnimationPage(),
               'record_animation_page': (context) => RecordAnimationPage(),
               'list_animation_page': (context) => ListAnimationPage(),
+              'hero_animation_page': (context) => HeroAnimationPage1(),
+              'material_mation_page': (context) => MaterialMotionPage(),
             },
             onGenerateRoute: (settings) {
               return MaterialPageRoute(builder: (context) {
-                String routeName = settings.name;
+                var routeName = settings.name;
                 return Text('未注册$routeName');
               });
             },

@@ -92,7 +92,7 @@ class _SelectColorPageState extends State<SelectColorPage> {
   }
 
   void sureSelected() {
-    String colorKey = _selectedItem.title;
+    var colorKey = _selectedItem.title;
     print('颜色的key值：$colorKey');
     SpUtil.putString(Constant.colorKey, colorKey);
     Provider.of<ThemeInfoProvider>(context, listen: false)
@@ -100,10 +100,10 @@ class _SelectColorPageState extends State<SelectColorPage> {
   }
 
   void _getData() {
-    final List<CommonItem> items = [];
-    for (int i = 0; i < ASColor.datas.keys.length; i++) {
-      String colorKey = ASColor.datas.keys.elementAt(i);
-      CommonRadioItem item = CommonRadioItem(
+    final items = <CommonItem>[];
+    for (var i = 0; i < ASColor.datas.keys.length; i++) {
+      var colorKey = ASColor.datas.keys.elementAt(i);
+      var item = CommonRadioItem(
         title: colorKey,
         onTap: _itemOnTap,
         value: colorKey == widget.value,
@@ -114,7 +114,7 @@ class _SelectColorPageState extends State<SelectColorPage> {
       items.add(item);
     }
 
-    CommonGroup group = CommonGroup(
+    var group = CommonGroup(
       items: items,
     );
 
@@ -124,7 +124,7 @@ class _SelectColorPageState extends State<SelectColorPage> {
   }
 
   void _itemOnTap(CommonItem item) {
-    final CommonRadioItem radio = item as CommonRadioItem;
+    final radio = item as CommonRadioItem;
     if (_selectedItem == null) {
       setState(() {
         radio.value = true;

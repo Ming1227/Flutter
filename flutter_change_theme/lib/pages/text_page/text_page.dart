@@ -166,7 +166,7 @@ class _TextPageState extends State<TextPage> {
   /// 设置过渡的文本
   Widget buildGraident() {
     final height = 40.0;
-    final Shader linearGradient = LinearGradient(
+    final linearGradient = LinearGradient(
       colors: <Color>[Colors.red, Colors.blue],
     ).createShader(
       Rect.fromLTWH(0.0, 0.0, MediaQuery.of(context).size.width, height),

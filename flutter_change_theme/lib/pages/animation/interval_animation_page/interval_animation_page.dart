@@ -8,8 +8,8 @@ class IntervalAnimationPage extends StatefulWidget {
 class _IntervalAnimationPageState extends State<IntervalAnimationPage>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
-  Animation _colorAnimation;
-  Animation _sizeAnimation;
+  // Animation _colorAnimation;
+  // Animation _sizeAnimation;
   Animation _animation;
 
   @override

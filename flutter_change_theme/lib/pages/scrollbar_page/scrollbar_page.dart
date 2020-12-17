@@ -47,7 +47,7 @@ class _ScrollBarPageState extends State<ScrollBarPage> {
   }
 
   bool _handleScrollNotification(ScrollNotification notification) {
-    final ScrollMetrics metrics = notification.metrics;
+    final metrics = notification.metrics;
     print('滚动组件最大滚动距离:${metrics.maxScrollExtent}');
     print('当前滚动位置:${metrics.pixels}');
     setState(() {

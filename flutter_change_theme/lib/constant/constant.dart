@@ -9,4 +9,6 @@ class Constant {
   static const String jsondatas = 'jsondatas/';
 
   static const String adhots = 'assets/adhots/';
+
+  static const String others = 'assets/others/';
 }

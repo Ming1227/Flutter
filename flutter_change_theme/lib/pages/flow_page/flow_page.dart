@@ -113,7 +113,7 @@ class _FlowPageState extends State<FlowPage> with TickerProviderStateMixin {
   }
 
   Widget buildMenuItem(IconData icon) {
-    final double buttonFlex =
+    final buttonFlex =
         MediaQuery.of(context).size.width * 2 / menuItems.length / 3;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),

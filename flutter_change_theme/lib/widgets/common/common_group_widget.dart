@@ -40,12 +40,12 @@ class CommonGroupWidgetState extends State<CommonGroupWidget> {
       ),
     );
 
-    final int count = items.length;
+    final count = items.length;
     var children = <Widget>[];
-    for (int i = 0; i < count; i++) {
+    for (var i = 0; i < count; i++) {
       final CommonItem item = items[i];
-      bool offstagIcon = ASUtils.isEmptyString(item.icon);
-      double indent = offstagIcon ? 16.0 : 16.0 + 30.0 + 16.0;
+      var offstagIcon = ASUtils.isEmptyString(item.icon);
+      var indent = offstagIcon ? 16.0 : 16.0 + 30.0 + 16.0;
       Widget child = CommonItemWidget(
         item: item,
       );
