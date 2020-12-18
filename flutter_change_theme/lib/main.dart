@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
 import 'package:flutter_change_theme/pages/animation/basic_animation_page/basic_animation_page.dart';
+import 'package:flutter_change_theme/pages/animation/curved_animation_page/curved_animation_page.dart';
 import 'package:flutter_change_theme/pages/animation/hero_animation_page/hero_animation_page1.dart';
 import 'package:flutter_change_theme/pages/animation/interval_animation_page/interval_animation_page.dart';
 import 'package:flutter_change_theme/pages/animation/list_animation_page/list_animation_page.dart';
@@ -9,12 +10,13 @@ import 'package:flutter_change_theme/pages/animation/material_motion_page/materi
 import 'package:flutter_change_theme/pages/animation/record_animation_page/record_animation_page.dart';
 import 'package:flutter_change_theme/pages/as_pageview_page/as_pageview_page.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
-import 'package:flutter_change_theme/pages/caculator_page/caculator_page.dart';
+import 'package:flutter_change_theme/pages/function_type/caculator_page/caculator_page.dart';
 import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
 import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
 import 'package:flutter_change_theme/pages/expand_page/expand_page.dart';
 import 'package:flutter_change_theme/pages/flow_page/flow_page.dart';
 import 'package:flutter_change_theme/pages/function_type/date_picker_page/date_picker_page.dart';
+import 'package:flutter_change_theme/pages/function_type/flutter_easyrefresh_page/easyrefresh_page.dart';
 import 'package:flutter_change_theme/pages/function_type/pop_menu_page/pop_menu_page.dart';
 import 'package:flutter_change_theme/pages/function_type/time_picker_page/time_picker_page.dart';
 import 'package:flutter_change_theme/pages/gesture_page/gesture_page.dart';
@@ -125,6 +127,8 @@ class MyApp extends StatelessWidget {
               'list_animation_page': (context) => ListAnimationPage(),
               'hero_animation_page': (context) => HeroAnimationPage1(),
               'material_mation_page': (context) => MaterialMotionPage(),
+              'curved_animation_page': (context) => CurvedAnimationPage(),
+              'easyrefresh_page': (context) => EasyRefreshPage(),
             },
             onGenerateRoute: (settings) {
               return MaterialPageRoute(builder: (context) {

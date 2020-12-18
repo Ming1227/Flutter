@@ -41,6 +41,8 @@ dependencies:
   # 动画Animations https://pub.dev/packages/animations
   # Material Mation 规范 https://material.io/design/motion/the-motion-system.html
   animations: ^1.1.1
+  # 下拉刷新 上拉加载 https://github.com/xuelongqy/flutter_easyrefresh
+  flutter_easyrefresh: ^2.1.7
 
 dev_dependencies:
   flutter_test:

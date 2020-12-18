@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_change_theme/pages/caculator_page/caculator_keyboard.dart';
+import 'package:flutter_change_theme/pages/function_type/caculator_page/caculator_keyboard.dart';
 import 'package:flutter_change_theme/utils/screen_adapter.dart';
 import 'package:flutter_change_theme/widgets/sizebox/sizebox.dart';
 

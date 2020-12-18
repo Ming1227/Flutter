@@ -158,19 +158,21 @@
                 "subTitle":"菜单框、提示框、警告框、shape",
                 "pageRouter":"pop_menu_page",
                 "tapHighlight":true
-            }
-        ],
-        "header":"功能型组件"
-    },
-    {
-        "items":[
+            },
             {
                 "title":"计算器",
                 "subTitle":"简易计算器",
                 "pageRouter":"easy_caculator_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"刷新组件",
+                "subTitle":"flutter_easyrefresh",
+                "pageRouter":"easyrefresh_page",
+                "tapHighlight":true
             }
-        ]
+        ],
+        "header":"功能型组件"
     },
     {
         "items":[
@@ -208,6 +210,12 @@
                 "title":"容器转换模式",
                 "subTitle":"MaterialMotion",
                 "pageRouter":"material_mation_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"3D效果翻书",
+                "subTitle":"ClipRect、CurvedAnimation",
+                "pageRouter":"curved_animation_page",
                 "tapHighlight":true
             }
         ],
