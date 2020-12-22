@@ -14,12 +14,37 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
   double _sliderValue = 1.0;
   RangeValues _rangeValues = RangeValues(0, 60);
   var _switchValue = false;
+  var _dropValue = '英超';
+  final List<String> _dropLists = ['英超', '西甲', '德甲', '中超', '意甲'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('基础组件'),
+        actions: [
+          Container(
+            padding: EdgeInsets.only(right: 10),
+            child: DropdownButton(
+                elevation: 10,
+                value: _dropValue,
+                dropdownColor: Colors.green,
+                iconEnabledColor: Colors.yellow,
+                iconDisabledColor: Colors.grey,
+                focusColor: Colors.pink,
+                style: Theme.of(context).textTheme.headline6,
+                items: List.generate(
+                  _dropLists.length,
+                  (index) => DropdownMenuItem(
+                      child: Text(_dropLists[index]), value: _dropLists[index]),
+                ).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _dropValue = value;
+                  });
+                }),
+          ),
+        ],
       ),
       body: Container(
         color: Theme.of(context).dividerColor,
@@ -36,6 +61,8 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
           buildSizeBox(),
           buildBasicBtnWidget(),
           buildSizeBox(),
+          buildButtonBarWidget(),
+          buildSizeBox(),
           buildRadioListTile(),
           buildSizeBox(),
           buildCheckBoxListTile(),
@@ -47,6 +74,23 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
           buildProgressIndicator(),
           buildSizeBox(),
           buildImageWidget(),
+        ],
+      ),
+    );
+  }
+
+  Widget buildButtonBarWidget() {
+    return Container(
+      color: Theme.of(context).accentColor,
+      child: ButtonBar(
+        alignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          RaisedButton(onPressed: () {}, child: Text('1')),
+          RaisedButton(onPressed: () {}, child: Text('22')),
+          RaisedButton(onPressed: () {}, child: Text('333')),
+          RaisedButton(onPressed: () {}, child: Text('4444')),
+          RaisedButton(onPressed: () {}, child: Text('55555')),
         ],
       ),
     );
@@ -237,7 +281,7 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               value: '足球',
               groupValue: _groupValue,
               title: Text('足球'),
-              activeColor: Colors.purple,
+              activeColor: Colors.yellow,
               onChanged: (value) {
                 setState(() {
                   _groupValue = value;
@@ -250,7 +294,7 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               value: '篮球',
               groupValue: _groupValue,
               title: Text('篮球'),
-              activeColor: Colors.purple,
+              activeColor: Colors.yellow,
               onChanged: (value) {
                 setState(() {
                   _groupValue = value;
@@ -263,7 +307,7 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               value: '排球',
               groupValue: _groupValue,
               title: Text('排球'),
-              activeColor: Colors.purple,
+              activeColor: Colors.yellow,
               controlAffinity: ListTileControlAffinity.platform,
               toggleable: true,
               onChanged: (value) {

@@ -9,7 +9,10 @@ import 'package:flutter_change_theme/pages/animation/list_animation_page/list_an
 import 'package:flutter_change_theme/pages/animation/material_motion_page/material_motion_page.dart';
 import 'package:flutter_change_theme/pages/animation/record_animation_page/record_animation_page.dart';
 import 'package:flutter_change_theme/pages/as_pageview_page/as_pageview_page.dart';
+import 'package:flutter_change_theme/pages/basic_widget_page/basic_page_one.dart';
+import 'package:flutter_change_theme/pages/basic_widget_page/basic_page_two.dart';
 import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
+import 'package:flutter_change_theme/pages/basic_widget_page/form_page.dart';
 import 'package:flutter_change_theme/pages/function_type/caculator_page/caculator_page.dart';
 import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
 import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
@@ -100,6 +103,9 @@ class MyApp extends StatelessWidget {
               '/': (context) => MyHomePage(),
               'text_page': (context) => TextPage(),
               'basic_page': (context) => BasicWidgetPage(),
+              'basic_page_one': (context) => BasicPageOne(),
+              'basic_page_two': (context) => BasicPageTwo(),
+              'as_from_page': (context) => ASFromPage(),
               'stack_page': (context) => StackPage(),
               'wrap_page': (context) => WrapPage(),
               'flow_page': (context) => FlowPage(),

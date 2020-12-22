@@ -14,9 +14,27 @@
                 "iconStr":"assets/images/basketball_check.png",
                 "pageRouter":"basic_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"模糊效果",
+                "subTitle":"BackdropFilter",
+                "pageRouter":"basic_page_one",
+                "tapHighlight":true
+            },
+            {
+                "title":"标签",
+                "subTitle":"RowChip、ChioceChip、FilterChip、ActionChip",
+                "pageRouter":"basic_page_two",
+                "tapHighlight":true
+            },
+            {
+                "title":"表单",
+                "subTitle":"Form、FormField、TextFormField",
+                "pageRouter":"as_from_page",
+                "tapHighlight":true
             }
         ],
-        "header":"文本组件"
+        "header":"基础组件"
     },
     {
         "items":[
