@@ -35,14 +35,19 @@ dependencies:
   # Flutter 常用工具库 https://github.com/Sky24n/flustars
   flustars: ^0.3.3
   # Flutter 屏幕适配 https://github.com/OpenFlutter/flutter_screenutil
-  flutter_screenutil: ^3.1.0
+  # flutter_screenutil: ^3.1.0
   # 图片缓存 https://github.com/renefloor/flutter_cached_network_image
-  cached_network_image: ^2.3.3
+  # cached_network_image: ^2.3.3
   # 动画Animations https://pub.dev/packages/animations
   # Material Mation 规范 https://material.io/design/motion/the-motion-system.html
-  animations: ^1.1.1
+  # animations: ^1.1.1
   # 下拉刷新 上拉加载 https://github.com/xuelongqy/flutter_easyrefresh
-  flutter_easyrefresh: ^2.1.7
+  # flutter_easyrefresh: ^2.1.7
+  # 自制package
+  first_harry:
+    git:
+      url: https://github.com/CMcadman/first_package.git
+      ref: master
 
 dev_dependencies:
   flutter_test:
@@ -63,17 +68,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/icon_selected_20x20.png
-    - assets/images/default_100x100.png
-    - assets/images/tableview_arrow_8x13.png
-    - assets/images/About_WeChat_AppIcon_64x64.png
-    - assets/images/basketball_check.png
-    - assets/images/check_open.png
-    - assets/images/football_check.png
-    
     - jsondatas/
-    - assets/adhots/
-    - assets/others/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

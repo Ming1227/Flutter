@@ -1,13 +1,9 @@
+import 'package:first_harry/first_harry.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_change_theme/common/common_group.dart';
-import 'package:flutter_change_theme/common/common_item.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/constant/constant.dart';
 import 'package:flutter_change_theme/providers/theme_info_providers.dart';
-import 'package:flutter_change_theme/utils/screen_adapter.dart';
-import 'package:flutter_change_theme/widgets/bar_button/bar_button.dart';
-import 'package:flutter_change_theme/widgets/common/common_group_widget.dart';
 import 'package:provider/provider.dart';
 
 class SelectColorPage extends StatefulWidget {
@@ -35,7 +31,7 @@ class _SelectColorPageState extends State<SelectColorPage> {
       appBar: AppBar(
         title: Text('选择主题'),
         leading: Container(
-          padding: EdgeInsets.only(left: ScreenAdapter.width(15)),
+          padding: EdgeInsets.only(left: ASScreenAdapter.width(15)),
           alignment: Alignment.centerLeft,
           child: BarButton(
             '取消',
@@ -47,7 +43,7 @@ class _SelectColorPageState extends State<SelectColorPage> {
         ),
         actions: [
           Container(
-            padding: EdgeInsets.only(right: ScreenAdapter.width(15)),
+            padding: EdgeInsets.only(right: ASScreenAdapter.width(15)),
             alignment: Alignment.centerRight,
             child: BarButton(
               '完成',
@@ -58,11 +54,11 @@ class _SelectColorPageState extends State<SelectColorPage> {
               highlightColor: Colors.purple,
               disabledColor: Colors.blue.withOpacity(0.5),
               padding: EdgeInsets.symmetric(
-                vertical: ScreenAdapter.height(4),
-                horizontal: ScreenAdapter.width(10),
+                vertical: ASScreenAdapter.height(4),
+                horizontal: ASScreenAdapter.width(10),
               ),
               borderRadius:
-                  BorderRadius.all(Radius.circular(ScreenAdapter.width(4))),
+                  BorderRadius.all(Radius.circular(ASScreenAdapter.width(4))),
               enabled: true,
               onTap: () {
                 /// 处理事件

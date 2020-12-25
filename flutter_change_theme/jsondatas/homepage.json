@@ -4,14 +4,14 @@
             {
                 "title":"文本组件",
                 "subTitle":"text、RichText、TextField",
-                "iconStr":"assets/images/football_check.png",
+                "iconStr":"assets1/images1/football_check.png",
                 "pageRouter":"text_page",
                 "tapHighlight":true
             },
             {
                 "title":"基础组件",
                 "subTitle":"Button、Switch、Progress",
-                "iconStr":"assets/images/basketball_check.png",
+                "iconStr":"assets1/images1/basketball_check.png",
                 "pageRouter":"basic_page",
                 "tapHighlight":true
             },

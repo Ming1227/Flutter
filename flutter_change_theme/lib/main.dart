@@ -1,41 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
-import 'package:flutter_change_theme/pages/animation/basic_animation_page/basic_animation_page.dart';
-import 'package:flutter_change_theme/pages/animation/curved_animation_page/curved_animation_page.dart';
-import 'package:flutter_change_theme/pages/animation/hero_animation_page/hero_animation_page1.dart';
-import 'package:flutter_change_theme/pages/animation/interval_animation_page/interval_animation_page.dart';
-import 'package:flutter_change_theme/pages/animation/list_animation_page/list_animation_page.dart';
-import 'package:flutter_change_theme/pages/animation/material_motion_page/material_motion_page.dart';
-import 'package:flutter_change_theme/pages/animation/record_animation_page/record_animation_page.dart';
-import 'package:flutter_change_theme/pages/as_pageview_page/as_pageview_page.dart';
-import 'package:flutter_change_theme/pages/basic_widget_page/basic_page_one.dart';
-import 'package:flutter_change_theme/pages/basic_widget_page/basic_page_two.dart';
-import 'package:flutter_change_theme/pages/basic_widget_page/basic_widget_page.dart';
-import 'package:flutter_change_theme/pages/basic_widget_page/form_page.dart';
-import 'package:flutter_change_theme/pages/function_type/caculator_page/caculator_page.dart';
-import 'package:flutter_change_theme/pages/container_size_page/container_size_page.dart';
-import 'package:flutter_change_theme/pages/cylinder_chart/cylinder_chart.dart';
-import 'package:flutter_change_theme/pages/expand_page/expand_page.dart';
-import 'package:flutter_change_theme/pages/flow_page/flow_page.dart';
-import 'package:flutter_change_theme/pages/function_type/date_picker_page/date_picker_page.dart';
-import 'package:flutter_change_theme/pages/function_type/flutter_easyrefresh_page/easyrefresh_page.dart';
-import 'package:flutter_change_theme/pages/function_type/pop_menu_page/pop_menu_page.dart';
-import 'package:flutter_change_theme/pages/function_type/time_picker_page/time_picker_page.dart';
-import 'package:flutter_change_theme/pages/gesture_page/gesture_page.dart';
-import 'package:flutter_change_theme/pages/gridview_page/gridview_page.dart';
-import 'package:flutter_change_theme/pages/listview_page/listview_page.dart';
-import 'package:flutter_change_theme/pages/nested_scrollview_page/nested_scrollview_page.dart';
-import 'package:flutter_change_theme/pages/page_view_page/page_view_page.dart';
-import 'package:flutter_change_theme/pages/scrollbar_page/scrollbar_page.dart';
-import 'package:flutter_change_theme/pages/sliver_appbar/sliver_appbar.dart';
-import 'package:flutter_change_theme/pages/sliver_list_grid/sliver_list_grid_page.dart';
-import 'package:flutter_change_theme/pages/sliver_persistent_head/sliver_persistent_head.dart';
-import 'package:flutter_change_theme/pages/stack_page/stack_page.dart';
-import 'package:flutter_change_theme/pages/text_page/text_page.dart';
-import 'package:flutter_change_theme/pages/wrap_page/wrap_page.dart';
 import 'package:flutter_change_theme/providers/theme_info_providers.dart';
 import 'package:provider/provider.dart';
+
+import 'package:first_harry/first_harry.dart';
 
 void main() {
   runApp(MyApp());
@@ -102,7 +71,7 @@ class MyApp extends StatelessWidget {
             routes: {
               '/': (context) => MyHomePage(),
               'text_page': (context) => TextPage(),
-              'basic_page': (context) => BasicWidgetPage(),
+              'basic_page': (context) => BasicPageZero(),
               'basic_page_one': (context) => BasicPageOne(),
               'basic_page_two': (context) => BasicPageTwo(),
               'as_from_page': (context) => ASFromPage(),
@@ -127,6 +96,7 @@ class MyApp extends StatelessWidget {
               'timePicker_page': (context) => TimePickerPage(),
               'pop_menu_page': (context) => PopMenuPage(),
               'easy_caculator_page': (context) => CaculatorPage(),
+              'easyrefresh_page': (context) => EasyRefreshPage(),
               'basic_animation_page': (context) => BasicAnimationPage(),
               'interval_animation_page': (context) => IntervalAnimationPage(),
               'record_animation_page': (context) => RecordAnimationPage(),
@@ -134,7 +104,6 @@ class MyApp extends StatelessWidget {
               'hero_animation_page': (context) => HeroAnimationPage1(),
               'material_mation_page': (context) => MaterialMotionPage(),
               'curved_animation_page': (context) => CurvedAnimationPage(),
-              'easyrefresh_page': (context) => EasyRefreshPage(),
             },
             onGenerateRoute: (settings) {
               return MaterialPageRoute(builder: (context) {
