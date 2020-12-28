@@ -55,12 +55,21 @@ class MyApp extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
+                  subtitle1: TextStyle(
+                    color: titleColor,
+                    fontSize: 16,
+                  ),
                   subtitle2: TextStyle(
                     color: subTitleColor,
                     fontSize: 16,
                   ),
                   bodyText1: TextStyle(
                     color: bodyColor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w100,
+                  ),
+                  bodyText2: TextStyle(
+                    color: titleColor,
                     fontSize: 15,
                     fontWeight: FontWeight.w100,
                   )),
@@ -75,6 +84,7 @@ class MyApp extends StatelessWidget {
               'basic_page_one': (context) => BasicPageOne(),
               'basic_page_two': (context) => BasicPageTwo(),
               'as_from_page': (context) => ASFromPage(),
+              'datatable_page': (context) => DataTablePage(),
               'stack_page': (context) => StackPage(),
               'wrap_page': (context) => WrapPage(),
               'flow_page': (context) => FlowPage(),

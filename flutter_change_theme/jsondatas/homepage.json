@@ -32,6 +32,12 @@
                 "subTitle":"Form、FormField、TextFormField",
                 "pageRouter":"as_from_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"表格",
+                "subTitle":"DataTable",
+                "pageRouter":"datatable_page",
+                "tapHighlight":true
             }
         ],
         "header":"基础组件"
