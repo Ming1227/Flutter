@@ -4,7 +4,6 @@ import 'package:first_harry/first_harry.dart';
 import 'package:flustars/flustars.dart' hide ScreenUtil;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_change_theme/constant/constant.dart';
 import 'package:flutter_change_theme/models/home_model/home_model_group.dart';
 import 'package:flutter_change_theme/pages/select_color/select_color_page.dart';
@@ -141,7 +140,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getJsonData() async {
-    await rootBundle
+    // await rootBundle
+    //     .loadString(Constant.jsondatas + 'homepage.json')
+    await DefaultAssetBundle.of(context)
         .loadString(Constant.jsondatas + 'homepage.json')
         .then((jsonStr) {
       final List homepageJson = json.decode(jsonStr);

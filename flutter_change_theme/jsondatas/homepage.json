@@ -38,6 +38,12 @@
                 "subTitle":"DataTable",
                 "pageRouter":"datatable_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"拖拽",
+                "subTitle":"DragTarget、Draggable",
+                "pageRouter":"draggable_page",
+                "tapHighlight":true
             }
         ],
         "header":"基础组件"
@@ -105,6 +111,12 @@
                 "title":"ListView组件",
                 "subTitle":"ListView",
                 "pageRouter":"listview_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"展开收起组件",
+                "subTitle":"ExpansionPanelList",
+                "pageRouter":"expansionpanellist_page",
                 "tapHighlight":true
             },
             {

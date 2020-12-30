@@ -132,7 +132,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "5fcc66836f93bee91ed5470aadc72e2c00df3e5c"
+      resolved-ref: "160f532f9c20d46258f058803413b98536e3510a"
       url: "https://github.com/CMcadman/first_package.git"
     source: git
     version: "0.0.1"
