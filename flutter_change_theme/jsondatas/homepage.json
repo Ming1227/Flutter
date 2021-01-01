@@ -67,6 +67,12 @@
                 "subTitle":"Flow",
                 "pageRouter":"flow_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"自定义Tabbar",
+                "subTitle":"ASTabbar",
+                "pageRouter":"as_tabbar_page",
+                "tapHighlight":true
             }
         ],
         "header":"布局组件"

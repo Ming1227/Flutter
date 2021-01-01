@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
+import 'package:flutter_change_theme/pages/as_tabbar_page.dart';
 import 'package:flutter_change_theme/providers/theme_info_providers.dart';
 import 'package:provider/provider.dart';
 
@@ -89,6 +90,7 @@ class MyApp extends StatelessWidget {
               'stack_page': (context) => StackPage(),
               'wrap_page': (context) => WrapPage(),
               'flow_page': (context) => FlowPage(),
+              'as_tabbar_page': (context) => ASTabBarPage(),
               'container_page': (context) => ContainerSizePage(),
               'expand_page': (context) => ExpandPage(),
               'cylinder_chart_page': (context) => CylinderChartPage(),
