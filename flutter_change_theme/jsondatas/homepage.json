@@ -44,6 +44,12 @@
                 "subTitle":"DragTarget、Draggable",
                 "pageRouter":"draggable_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"异步任务",
+                "subTitle":"FutureBuilder、GlowingOverscrollIndicator",
+                "pageRouter":"futurebuilder_page",
+                "tapHighlight":true
             }
         ],
         "header":"基础组件"
