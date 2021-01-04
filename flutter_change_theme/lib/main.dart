@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_change_theme/constant/as_color.dart';
 import 'package:flutter_change_theme/home_page.dart';
-import 'package:flutter_change_theme/pages/as_tabbar_page.dart';
-import 'package:flutter_change_theme/pages/future_builder_page.dart';
+import 'package:flutter_change_theme/pages/as_appbar_page.dart';
 import 'package:flutter_change_theme/providers/theme_info_providers.dart';
 import 'package:provider/provider.dart';
 
@@ -83,16 +82,19 @@ class MyApp extends StatelessWidget {
               '/': (context) => MyHomePage(),
               'text_page': (context) => TextPage(),
               'basic_page': (context) => BasicPageZero(),
-              'basic_page_one': (context) => BasicPageOne(),
-              'basic_page_two': (context) => BasicPageTwo(),
+              'basic_page_backdropfilter': (context) =>
+                  BasicPageBackdropfilter(),
+              'basic_page_chip': (context) => BasicPageChip(),
               'as_from_page': (context) => ASFromPage(),
               'datatable_page': (context) => DataTablePage(),
+              'paginated_datatable_page': (context) => PaginatedDataTablePage(),
               'draggable_page': (context) => DraggablePage(),
               'futurebuilder_page': (context) => FutureBuilderPage(),
               'stack_page': (context) => StackPage(),
               'wrap_page': (context) => WrapPage(),
               'flow_page': (context) => FlowPage(),
               'as_tabbar_page': (context) => ASTabBarPage(),
+              'as_appbar_page': (context) => ASAppBarPage(),
               'container_page': (context) => ContainerSizePage(),
               'expand_page': (context) => ExpandPage(),
               'cylinder_chart_page': (context) => CylinderChartPage(),

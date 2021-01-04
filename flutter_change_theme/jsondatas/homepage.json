@@ -4,27 +4,25 @@
             {
                 "title":"文本组件",
                 "subTitle":"text、RichText、TextField",
-                "iconStr":"assets1/images1/football_check.png",
                 "pageRouter":"text_page",
                 "tapHighlight":true
             },
             {
                 "title":"基础组件",
                 "subTitle":"Button、Switch、Progress",
-                "iconStr":"assets1/images1/basketball_check.png",
                 "pageRouter":"basic_page",
                 "tapHighlight":true
             },
             {
                 "title":"模糊效果",
                 "subTitle":"BackdropFilter",
-                "pageRouter":"basic_page_one",
+                "pageRouter":"basic_page_backdropfilter",
                 "tapHighlight":true
             },
             {
                 "title":"标签",
                 "subTitle":"RowChip、ChioceChip、FilterChip、ActionChip",
-                "pageRouter":"basic_page_two",
+                "pageRouter":"basic_page_chip",
                 "tapHighlight":true
             },
             {
@@ -37,6 +35,12 @@
                 "title":"表格",
                 "subTitle":"DataTable",
                 "pageRouter":"datatable_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"分页表格",
+                "subTitle":"PaginatedDataTable",
+                "pageRouter":"paginated_datatable_page",
                 "tapHighlight":true
             },
             {
@@ -78,6 +82,12 @@
                 "title":"自定义Tabbar",
                 "subTitle":"ASTabbar",
                 "pageRouter":"as_tabbar_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"自定义AppBar",
+                "subTitle":"ASAppBar",
+                "pageRouter":"as_appbar_page",
                 "tapHighlight":true
             }
         ],
