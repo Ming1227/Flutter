@@ -54,6 +54,24 @@
                 "subTitle":"FutureBuilder、GlowingOverscrollIndicator",
                 "pageRouter":"futurebuilder_page",
                 "tapHighlight":true
+            },
+            {
+                "title":"渐变组件",
+                "subTitle":"ShaderMask、LinearGradient、RadialGradient、SweepGradient",
+                "pageRouter":"shadermask_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"步骤进度",
+                "subTitle":"Stepper",
+                "pageRouter":"stepper_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"数据流",
+                "subTitle":"StreamBuilder",
+                "pageRouter":"stream_builder_page",
+                "tapHighlight":true
             }
         ],
         "header":"基础组件"
@@ -136,6 +154,12 @@
                 "tapHighlight":true
             },
             {
+                "title":"拖动排序的列表组件",
+                "subTitle":"ReorderableListView",
+                "pageRouter":"reorderablelist_page",
+                "tapHighlight":true
+            },
+            {
                 "title":"展开收起组件",
                 "subTitle":"ExpansionPanelList",
                 "pageRouter":"expansionpanellist_page",
@@ -174,6 +198,12 @@
                 "title":"SliverListGrid",
                 "subTitle":"Sliver",
                 "pageRouter":"sliver_list_grid_page",
+                "tapHighlight":true
+            },
+            {
+                "title":"SliverFixedExtentList",
+                "subTitle":"SliverLayoutBuilder、SliverPrototypeExtentList等",
+                "pageRouter":"sliver_fixed_extent_list_page",
                 "tapHighlight":true
             },
             {
