@@ -28,6 +28,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<CommonGroup> dataSource = [];
+  final ValueNotifier<String> _name = ValueNotifier<String>('harry');
 
   @override
   void initState() {
@@ -52,14 +53,38 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(5),
-              height: 200,
+            UserAccountsDrawerHeader(
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              accountName: ValueListenableBuilder(
+                valueListenable: _name,
+                builder: (context, value, child) {
+                  return Text(value);
+                },
+                // child: Text('firstName'),
+              ),
+              accountEmail: Text('MingChenXX@163.com'),
               decoration: BoxDecoration(
                 color: Theme.of(context).accentColor,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(20),
               ),
-              child: Image.asset(ASConstant.adhots + 'adhots_6.jpg'),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage(ASConstant.adhots + 'adhots_6.jpg',
+                    package: ASConstant.packageName),
+              ),
+              otherAccountsPictures: [
+                CircleAvatar(
+                  backgroundImage: AssetImage(
+                      ASConstant.adhots + 'adhots_3.jpg',
+                      package: ASConstant.packageName),
+                ),
+                CircleAvatar(
+                  backgroundImage: AssetImage(
+                      ASConstant.adhots + 'adhots_2.jpg',
+                      package: ASConstant.packageName),
+                ),
+              ],
+              onDetailsPressed: () {},
+              arrowColor: Colors.pink,
             ),
             ASSizeBox(),
             ListTile(
@@ -95,6 +120,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ASSizeBox(),
+            RaisedButton(
+              onPressed: () {
+                _name.value = 'Harry111';
+              },
+              child: Text('切换姓名'),
+            ),
           ],
         ),
       ),
