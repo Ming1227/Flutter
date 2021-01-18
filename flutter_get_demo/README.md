@@ -18,9 +18,91 @@ samples, guidance on mobile development, and a full API reference.
 
 # 源码阅读总结
 
-## 状态管理
+## 状态管理 - 响应式状态管理
 
+- 使用的步骤：
 
+```
+// 在需要观察的对象后面加上".obs"
+var count = 0.obs;
+
+// 在UI中需要使用的地方使用
+Obx(() => Text('${controller.count}'))
+```
+
+从.obs进入查看,是一个针对int的IntExtension的扩展
+从源码中可以看到还有其他的扩展
+StringExtension、DoubleExtension、BoolExtension、ListExtension、MapExtension、SetExtension、RxT<T> on T(泛型)
+
+```
+extension IntExtension on int {
+  /// Returns a `RxInt` with [this] `int` as initial value.
+  RxInt get obs => RxInt(this);
+}
+```
+
+- 查看RxInt
+- 继承_BaseRxNum<T extends num>,主要是对num数字操作符的实现，继承自_RxImpl<T>
+- 而其又是继承自RxNotifier<T>实现RxObjectMiXin<T>
+- RxNotifier<T>是RxInterface<T>并实现NotifyMananger<T>协议
+- NotifyMananger<T>协议包含属性subject(类型为GetStream<T>)，在改变时发送通知
+- RxObjectMixin<T>是一个协议，在NotifyMananger<T>中使用，主要包含_value属性（类型为泛型T）
+
+- 查看Obx(),继承自ObxWidget
+
+```
+typedef WidgetCallback = Widget Function();
+
+class Obx extends ObxWidget {
+  final WidgetCallback builder; 
+
+  const Obx(this.builder);
+
+  @override
+  Widget build() => builder();
+}
+```
+
+- ObxWidget是一个可继承类，其自身继承自StatefulWidget
+
+```
+abstract class ObxWidget extends StatefulWidget {
+  const ObxWidget({Key key}) : super(key: key);
+
+  @override
+  _ObxState createState() => _ObxState();
+
+  @protected
+  Widget build();
+}
+```
+
+- _ObxState
+
+```
+class _ObxState extends State<ObxWidget> {
+  RxInterface _observer;
+  StreamSubscription subs;
+
+  _ObxState() {
+    _observer = RxNotifier();
+  }
+  // 这里对RxInterface进行监听并刷新值
+  @override
+  void initState() {
+    subs = _observer.listen(_updateTree);
+    super.initState();
+  }
+  
+  void _updateTree(_) {
+    if (mounted) {
+      setState(() {});
+    }
+  }
+  
+  ···
+}
+```
 
 ## 路由管理
 
