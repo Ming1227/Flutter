@@ -10,7 +10,10 @@ class OtherView extends StatelessWidget {
       appBar: AppBar(
         title: Text('Other'.tr),
       ),
-      body: buildChildWidget(),
+      body: Container(
+        width: context.mediaQuerySize.width,
+        child: buildChildWidget(),
+      ),
     );
   }
 
