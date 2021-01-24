@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_get_demo/homecontroller.dart';
+import 'package:flutter_get_demo/my_inherited_widget_view.dart';
 import 'package:get/get.dart';
 
 class OtherView extends StatelessWidget {
@@ -24,6 +25,12 @@ class OtherView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('count'.tr + ': ${con.count}'),
+          RaisedButton(
+            onPressed: () {
+              Get.to(MyInheritedWidgetView(), transition: Transition.cupertino);
+            },
+            child: Text('InheritedWidget'),
+          ),
           RaisedButton(
             onPressed: () {
               con.updateLocale();
