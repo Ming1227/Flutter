@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_get_demo/homecontroller.dart';
 import 'package:flutter_get_demo/my_applifecycle.dart';
 import 'package:flutter_get_demo/other_view.dart';
+import 'package:flutter_get_demo/person_info.dart';
 import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
@@ -52,6 +53,8 @@ class HomeView2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('HomeView->build');
+    // PersonUtil().myPrint();
+    // PersonUtil().print('s1');
     return GetBuilder(
       init: HomeController(),
       builder: (controller) {
@@ -73,6 +76,29 @@ class HomeView2 extends StatelessWidget {
                         transition: Transition.cupertino);
                   },
                   child: Text('App 生命周期'),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    RaisedButton(
+                      onPressed: () {
+                        PersonUtil().updateData(age: 20, sex: '女');
+                      },
+                      child: Text('修改信息1'),
+                    ),
+                    RaisedButton(
+                      onPressed: () {
+                        PersonUtil().updateData(username: 'harry123', sex: '男');
+                      },
+                      child: Text('修改信息2'),
+                    ),
+                    RaisedButton(
+                      onPressed: () {
+                        PersonUtil().myPrint();
+                      },
+                      child: Text('打印信息'),
+                    ),
+                  ],
                 ),
               ],
             ),
