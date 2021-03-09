@@ -25,31 +25,31 @@ class OtherView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('count'.tr + ': ${con.count}'),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               Get.to(MyInheritedWidgetView(), transition: Transition.cupertino);
             },
             child: Text('InheritedWidget'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               con.updateLocale();
             },
             child: Text('changeLocale'.tr),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               con.updateTheme();
             },
             child: Text('changeTheme'.tr),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               Get.snackbar('title', 'message');
             },
             child: Text('顶部snackbar'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               Get.bottomSheet(
                   Container(
@@ -62,14 +62,14 @@ class OtherView extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            RaisedButton(
+                            ElevatedButton(
                               onPressed: () {
                                 print('取消');
                                 Get.back();
                               },
                               child: Text('取消'),
                             ),
-                            RaisedButton(
+                            ElevatedButton(
                               onPressed: () {
                                 print('确认');
                                 Get.back();
@@ -85,7 +85,7 @@ class OtherView extends StatelessWidget {
             },
             child: Text('底部弹窗'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               Get.dialog(Container(
                 alignment: Alignment.center,
@@ -105,7 +105,7 @@ class OtherView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        FlatButton(
+                        TextButton(
                           onPressed: () {
                             Get.back();
                           },
@@ -114,7 +114,7 @@ class OtherView extends StatelessWidget {
                             style: TextStyle(color: Colors.red),
                           ),
                         ),
-                        FlatButton(
+                        TextButton(
                             child: Text(
                               '确定',
                             ),

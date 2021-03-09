@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
         title: Obx(() => Text('Clicks'.tr + ': ${con.count}')),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to Other'.tr),
           onPressed: () => Get.to(OtherView()),
         ),
@@ -36,7 +36,7 @@ class HomeView1 extends GetView<HomeController> {
         title: Obx(() => Text('Clicks'.tr + '1' + ': ${controller.count}')),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to Other'.tr),
           onPressed: () => Get.to(OtherView()),
         ),
@@ -65,12 +65,12 @@ class HomeView2 extends StatelessWidget {
           body: Center(
             child: Column(
               children: [
-                RaisedButton(
+                ElevatedButton(
                   child: Text('Go to Other'.tr),
                   onPressed: () =>
                       Get.to(OtherView(), transition: Transition.cupertino),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     return Get.to(MyAppLifeCycle(),
                         transition: Transition.cupertino);
@@ -80,19 +80,19 @@ class HomeView2 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () {
                         PersonUtil().updateData(age: 20, sex: '女');
                       },
                       child: Text('修改信息1'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () {
                         PersonUtil().updateData(username: 'harry123', sex: '男');
                       },
                       child: Text('修改信息2'),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () {
                         PersonUtil().myPrint();
                       },
