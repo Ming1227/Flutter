@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_get_demo/basic/buttons/showbuttons.dart';
 import 'package:flutter_get_demo/homecontroller.dart';
 import 'package:flutter_get_demo/my_applifecycle.dart';
 import 'package:flutter_get_demo/other_view.dart';
@@ -70,7 +71,7 @@ class HomeView2 extends StatelessWidget {
                   onPressed: () =>
                       Get.to(OtherView(), transition: Transition.cupertino),
                 ),
-                ElevatedButton(
+                OutlinedButton(
                   onPressed: () {
                     return Get.to(MyAppLifeCycle(),
                         transition: Transition.cupertino);
@@ -80,7 +81,7 @@ class HomeView2 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ElevatedButton(
+                    TextButton(
                       onPressed: () {
                         PersonUtil().updateData(age: 20, sex: '女');
                       },
@@ -98,6 +99,17 @@ class HomeView2 extends StatelessWidget {
                       },
                       child: Text('打印信息'),
                     ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Get.to(ShowButtons());
+                        },
+                        child: Text('自定义button')),
+                    ElevatedButton(onPressed: () {}, child: Text('自定义icon')),
                   ],
                 ),
               ],
