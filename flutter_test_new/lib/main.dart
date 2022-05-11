@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
-import 'package:saturn/st_buttons/st_button_icon.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:saturn/st_buttons/st_button_include.dart';
-import 'package:saturn/st_buttons/st_buttons.dart';
+import 'package:saturn/saturn.dart';
 
 void main() {
   // runApp(MyApp());
@@ -15,6 +12,7 @@ void main() {
 class Home extends StatelessWidget {
   var count = 0.obs;
   var butName = 'defaultBtn'.obs;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,56 +29,39 @@ class Home extends StatelessWidget {
               },
               child: Obx(() => Text("$count")),
             ),
-            STButtonMOT(
+            STButton(
               icon: Icon(
                 Icons.star,
                 color: Colors.white,
               ),
-              label: Text(
-                'Big',
-                style: TextStyle(color: Colors.white),
-              ),
-              btnState: STButtonState.Danger,
-              btnType: STButtonType.Main,
+              text: 'Big',
               height: 50,
-              width: 200,
-              onPressed: () {
+              onTap: () {
                 count += 1;
               },
             ),
             SizedBox(height: 5),
-            STButtonMOT(
-              label: Text(
-                'outline',
-                style: TextStyle(color: Colors.blue),
-              ),
-              btnType: STButtonType.OutLine,
-              btnState: STButtonState.Loading,
-              onPressed: () {
+            STButton(
+              text: 'outline',
+              onTap: () {
                 count -= 1;
               },
             ),
             SizedBox(height: 5),
-            STButtonMOT(
-              label: Text(
-                'text',
-                style: TextStyle(color: Colors.blue),
-              ),
+            STButton(
+              text: 'text',
               icon: Icon(Icons.ac_unit),
-              btnType: STButtonType.Text,
-              btnState: STButtonState.Focus,
-              onPressed: () {
+              onTap: () {
                 count -= 1;
               },
             ),
             SizedBox(height: 5),
-            STButtonIcon(
+            STButton.icon(
               icon: Icon(
                 Icons.check_box,
                 color: Colors.white,
               ),
-              btnState: STButtonState.Success,
-              onPressed: () {
+              onTap: () {
                 count += 1;
               },
             ),
